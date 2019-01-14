@@ -6,5 +6,10 @@ class Dog
     self.name = name
     self.breed = breed
     self.age = age
+    @@all << self
+  end
+
+  def all
+    @@all.dup.freeze
   end
 end
